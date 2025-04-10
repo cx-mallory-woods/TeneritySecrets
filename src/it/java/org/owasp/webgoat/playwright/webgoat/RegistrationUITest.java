@@ -40,7 +40,7 @@ public class RegistrationUITest extends PlaywrightTest {
     registrationPage.open();
 
     var newUsername = "newuser" + System.currentTimeMillis();
-    var password = "password123";
+   
     registrationPage.register(newUsername, password);
 
     assertThat(page.content()).contains(newUsername);
